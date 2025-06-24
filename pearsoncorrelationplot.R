@@ -37,14 +37,14 @@ ggplot(merged_df, aes(x = Total_TE_Normal, y = Total_TE_Tumor)) +
   theme_minimal()
 
 
-# Step 1: Apply -log2 transformation with +1 to avoid log(0)
-merged_df$neg_log2_Total_TE_Normal <- log2(merged_df$Total_TE_Normal + 1)
-merged_df$neg_log2_Total_TE_Tumor  <- log2(merged_df$Total_TE_Tumor + 1)
+# Step 1: Apply log2 transformation with +1 to avoid log(0)
+merged_df$log2_Total_TE_Normal <- log2(merged_df$Total_TE_Normal + 1)
+merged_df$log2_Total_TE_Tumor  <- log2(merged_df$Total_TE_Tumor + 1)
 
 # Step 2: Compute Pearson correlation and p-value
 cor_result <- cor.test(
-  merged_df$neg_log2_Total_TE_Normal,
-  merged_df$neg_log2_Total_TE_Tumor,
+  merged_df$log2_Total_TE_Normal,
+  merged_df$log2_Total_TE_Tumor,
   method = "pearson"
 )
 
