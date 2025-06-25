@@ -1,0 +1,24 @@
+##source <your_env>
+source /data/williamsjoh/conda/envs/pyn2_env/bin/activate
+##xtea --case_control --tumor \
+##  -i /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/sample_barcodes.txt \
+##  -b /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/updated_subject_bam_paths.txt.case_list \
+##  -x null \
+##  -p /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xTea/LINE1/MosaicTum \
+##  -o submit_jobs.sh \
+##  --lib /data/williamsjoh/resources/xtea/rep_lib_annotation \
+##  -r /data/Zhang_Group/Sharing/Reference/Homo_sapiens_assembly38.fasta \
+##  -g /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/gencode.v33.primary_assembly.annotation.gff3 \
+##  --xtea /data/williamsjoh/tools/xtea_mosaic/xtea \
+##  -y 1 \
+##  -f 5907
+
+
+
+
+
+##formating for creating xtea files
+xtea --case_control --tumor   -i /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/sample_barcodes.txt   -b /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/subject_bam_paths.txt  -x null  -p /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xTea/LINE1/Mosaic_Case  --lib /data/williamsjoh/resources/xtea/rep_lib_annotation/LINE/hg38   -r /data/Zhang_Group/Sharing/Reference/Homo_sapiens_assembly38.fasta   -g /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/gencode.v33.primary_assembly.annotation.gff3   --xtea /data/williamsjoh/tools/xtea_mosaic/xtea   -y 1   -f 5907
+xtea    -i /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/sample_barcodes.txt   -b /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/updated_subject_bam_paths.txt.case_list   -x null   -p /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xTea/LINE1/Mosaic_Case_Tumr  --lib /data/williamsjoh/resources/xtea/rep_lib_annotation/LINE/hg38   -r /data/Zhang_Group/Sharing/Reference/Homo_sapiens_assembly38.fasta   -g /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/gencode.v33.primary_assembly.annotation.gff3   --xtea /data/williamsjoh/tools/xtea_mosaic/xtea   -y 1   -f 5907
+xtea    -i /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/sample_barcodes.txt   -b /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/updated_subject_bam_paths.txt.ctrl_list   -x null   -p /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xTea/LINE1/Mosaic_Ctrl_Norm  --lib /data/williamsjoh/resources/xtea/rep_lib_annotation/LINE/hg38   -r /data/Zhang_Group/Sharing/Reference/Homo_sapiens_assembly38.fasta   -g /data/williamsjoh/xTEA_MELTAnalysis/TCGA_xTEAAnalysis/xteafiles/gencode.v33.primary_assembly.annotation.gff3   --xtea /data/williamsjoh/tools/xtea_mosaic/xtea   -y 1   -f 5907
+##Next, run the run_gnrt shell script
